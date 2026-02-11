@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fixy Logística - Sumate como Transportista</title>
+    <meta name="description"
+        content="Sumate como Transportista a Fixy. Operación zonificada, recorridos claros y pagos transparentes para última milla en CABA y Gran Buenos Aires.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        fixy: {
+                            blue: '#008FC3',
+                            yellow: '#FBBE37',
+                            grey: '#9EA3A5',
+                            paper: '#F3F3F2',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'], // Fallback for Filson Pro
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-white text-gray-800 font-sans antialiased">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-sm shadow-sm transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center">
+                    <img src="assets/Logo.png" alt="Fixy Logística" class="h-10 w-auto">
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#inicio"
+                        class="text-gray-600 hover:text-fixy-blue font-medium transition-colors">Inicio</a>
+
+                    <a href="#que-hacemos" class="text-gray-600 hover:text-fixy-blue font-medium transition-colors">Qué
+                        Hacemos</a>
+                    <a href="#como-trabajamos"
+                        class="text-gray-600 hover:text-fixy-blue font-medium transition-colors">Cómo Trabajamos</a>
+                    <a href="#zonas" class="text-gray-600 hover:text-fixy-blue font-medium transition-colors">Zonas</a>
+                    <a href="#requisitos"
+                        class="text-gray-600 hover:text-fixy-blue font-medium transition-colors">Requisitos</a>
+                </div>
+                <div class="hidden md:flex">
+                    <a href="https://wa.link/72nkep" target="_blank"
+                        class="bg-fixy-blue text-white px-6 py-2 rounded-full font-semibold hover:bg-sky-600 transition-all shadow-md hover:shadow-lg">
+                        Al finalizar la lectura continuamos
+                    </a>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-fixy-blue focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#inicio"
+                    class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-fixy-blue hover:bg-gray-50 rounded-md">Inicio</a>
+
+                <a href="#que-hacemos"
+                    class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-fixy-blue hover:bg-gray-50 rounded-md">Qué
+                    Hacemos</a>
+                <a href="#como-trabajamos"
+                    class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-fixy-blue hover:bg-gray-50 rounded-md">Cómo
+                    Trabajamos</a>
+                <a href="#zonas"
+                    class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-fixy-blue hover:bg-gray-50 rounded-md">Zonas</a>
+                <a href="#requisitos"
+                    class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-fixy-blue hover:bg-gray-50 rounded-md">Requisitos</a>
+                <a href="https://wa.link/72nkep"
+                    class="block px-3 py-2 text-base font-bold text-fixy-blue hover:bg-gray-50 rounded-md mt-4">Al
+                    finalizar la lectura continuamos</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="pt-32 pb-20 bg-gradient-to-br from-gray-50 to-white overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-4xl mx-auto">
+                <h1 class="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl mb-6">
+                    <span class="block">Sumate como</span>
+                    <span class="block text-fixy-blue">Transportista a Fixy</span>
+                </h1>
+                <p class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl">
+                    Operación zonificada, recorridos claros y pagos transparentes para última milla en CABA y Gran
+                    Buenos Aires.
+                </p>
+                <!-- CTA Buttons removed as requested -->
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Qué Hacemos -->
+    <section id="que-hacemos" class="py-16 bg-fixy-paper">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:grid lg:grid-cols-2 lg:gap-16 items-center">
+                <div>
+                    <h2 class="text-base text-fixy-blue font-semibold tracking-wide uppercase">Servicios</h2>
+                    <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl mb-6">
+                        Nuestra Operatoria
+                    </p>
+                    <p class="text-lg text-gray-600 mb-6">
+                        Realizamos entregas de última milla para e-commerce, con alto volumen diario de envíos y una
+                        operatoria basada principalmente en contra reembolso.
+                    </p>
+                    <div class="bg-white p-6 rounded-2xl shadow-sm mb-6">
+                        <h4 class="font-bold text-gray-800 mb-2">Esto implica:</h4>
+                        <ul class="space-y-2">
+                            <li class="flex items-start">
+                                <svg class="h-6 w-6 text-fixy-blue mr-2" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span>Entregas reales con contacto con destinatarios.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="h-6 w-6 text-fixy-blue mr-2" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span>Manejo responsable del efectivo.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="h-6 w-6 text-fixy-blue mr-2" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span>Rendición diaria en depósito.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                    <div class="bg-white p-8 rounded-2xl shadow-lg border-l-4 border-fixy-yellow">
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">Modalidad de cobro de los envíos:</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-center justify-between p-4 bg-gray-50 rounded-lg">
+                                <span class="font-medium">Contra reembolso</span>
+                                <span class="font-bold text-fixy-blue">95%</span>
+                            </div>
+                            <div class="flex items-center justify-between p-4 bg-gray-50 rounded-lg">
+                                <span class="font-medium">Pago anticipado</span>
+                                <span class="font-bold text-fixy-blue">10%</span>
+                            </div>
+                            <div class="flex items-center justify-between p-4 bg-gray-50 rounded-lg opacity-75">
+                                <span class="font-medium">FixyPay (QR)</span>
+                                <span
+                                    class="text-xs uppercase bg-fixy-yellow text-white px-2 py-1 rounded">Próximamente</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cómo Trabajamos -->
+    <section id="como-trabajamos" class="py-16 bg-white overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">Cómo trabajamos con nuestros
+                    Transportistas</h2>
+                <p class="mt-4 max-w-2xl mx-auto text-xl text-gray-500">
+                    En Fixy los transportistas son parte central de la operación. Buscamos personas que quieran trabajar
+                    con reglas claras, recorridos definidos y pagos transparentes.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div
+                    class="bg-white border border-gray-100 p-6 rounded-2xl shadow-sm hover:shadow-md transition-shadow text-center">
+                    <div
+                        class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4 text-fixy-blue">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7">
+                            </path>
+                        </svg>
+                    </div>
+                    <h3 class="font-bold text-gray-900 mb-2">Recorridos Zonificados</h3>
+                    <p class="text-gray-500 text-sm">Asignados mediante app.</p>
+                </div>
+                <div
+                    class="bg-white border border-gray-100 p-6 rounded-2xl shadow-sm hover:shadow-md transition-shadow text-center">
+                    <div
+                        class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4 text-fixy-blue">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z">
+                            </path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-bold text-gray-900 mb-2">Zona Específica</h3>
+                    <p class="text-gray-500 text-sm">Operación dentro de una zona específica.</p>
+                </div>
+                <div
+                    class="bg-white border border-gray-100 p-6 rounded-2xl shadow-sm hover:shadow-md transition-shadow text-center">
+                    <div
+                        class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4 text-fixy-blue">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-bold text-gray-900 mb-2">Carga Rápida</h3>
+                    <p class="text-gray-500 text-sm">Tiempo promedio de carga: 30 minutos.</p>
+                </div>
+                <div
+                    class="bg-white border border-gray-100 p-6 rounded-2xl shadow-sm hover:shadow-md transition-shadow text-center">
+                    <div
+                        class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4 text-fixy-blue">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-bold text-gray-900 mb-2">App Inteligente</h3>
+                    <p class="text-gray-500 text-sm">Notificaciones automáticas al destinatario por WhatsApp.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modalidades de Trabajo -->
+    <section class="py-16 bg-fixy-paper">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl text-center mb-12">Modalidades de Trabajo</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Turno Mañana -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden border-t-8 border-fixy-blue">
+                    <div class="p-8">
+                        <div class="flex items-center justify-between mb-6">
+                            <h3 class="text-2xl font-bold text-gray-900">Turno Mañana</h3>
+                            <span
+                                class="bg-blue-100 text-fixy-blue text-xs font-bold px-3 py-1 rounded-full uppercase">Principal</span>
+                        </div>
+                        <ul class="space-y-4 text-gray-600">
+                            <li class="flex items-center"><span class="w-2 h-2 bg-fixy-blue rounded-full mr-3"></span>45
+                                a 60 envíos diarios.</li>
+                            <li class="flex items-center"><span
+                                    class="w-2 h-2 bg-fixy-blue rounded-full mr-3"></span>Lunes a viernes.</li>
+                            <li class="flex items-center"><span
+                                    class="w-2 h-2 bg-fixy-blue rounded-full mr-3"></span>Horario de carga: 8:00 am en
+                                Flores (cerca de Soldati).</li>
+                            <li class="flex items-center"><span
+                                    class="w-2 h-2 bg-fixy-blue rounded-full mr-3"></span>Regreso al depósito para
+                                rendir al finalizar el recorrido.</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Turno Tarde -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden border-t-8 border-fixy-yellow">
+                    <div class="p-8">
+                        <div class="flex items-center justify-between mb-6">
+                            <h3 class="text-2xl font-bold text-gray-900">Turno Tarde</h3>
+                            <span
+                                class="bg-yellow-100 text-yellow-800 text-xs font-bold px-3 py-1 rounded-full uppercase">Complementario</span>
+                        </div>
+                        <ul class="space-y-4 text-gray-600">
+                            <li class="flex items-center"><span
+                                    class="w-2 h-2 bg-fixy-yellow rounded-full mr-3"></span>30 a 40 envíos diarios.</li>
+                            <li class="flex items-center"><span
+                                    class="w-2 h-2 bg-fixy-yellow rounded-full mr-3"></span>Mismo esquema con menor
+                                volumen.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+    <!-- Ingresos -->
+    <section class="py-16 bg-white bg-gradient-to-b from-white to-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-extrabold text-gray-900 mb-8">Ingresos y Esquema de Pago</h2>
+            <p class="text-xl text-gray-600 mb-12 max-w-3xl mx-auto">
+                El pago se realiza por paquete entregado y varía según la zona.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto mb-12">
+                <div class="bg-white p-8 rounded-2xl shadow-md border hover:border-fixy-blue transition-colors">
+                    <p class="text-sm text-gray-500 uppercase tracking-wide font-semibold mb-2">Promedio por paquete</p>
+                    <p class="text-4xl font-extrabold text-fixy-blue">$2.255 <span
+                            class="text-2xl text-gray-400 font-normal">a</span> $4.538</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-md border hover:border-fixy-blue transition-colors">
+                    <p class="text-sm text-gray-500 uppercase tracking-wide font-semibold mb-2">Ingresos mensuales
+                        estimados</p>
+                    <p class="text-3xl font-extrabold text-gray-800">$1.7M <span
+                            class="text-xl text-gray-400 font-normal">a</span> $2.9M</p>
+                    <p class="text-sm text-gray-500 mt-2">pagos semanales y quincenales</p>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+    <!-- Zonas (Interactive Map) -->
+    <section id="zonas" class="py-16 bg-gray-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-10">
+                <h2 class="text-3xl font-extrabold text-white sm:text-4xl">Zonas de Cobertura</h2>
+                <p class="mt-4 text-xl text-gray-300 max-w-2xl mx-auto">
+
+                    Cubrimos Zona Sur, Oeste, Norte y CABA.<br>
+                    <span class="text-fixy-yellow font-medium">Los colores del mapa indican el monto abonado por paquete
+                        según localidad.</span>
+                </p>
+            </div>
+
+            <div class="relative max-w-4xl mx-auto bg-white rounded-xl overflow-hidden shadow-2xl">
+                <div class="relative" id="map-container">
+                    <img src="assets/Mapa 2026.png" alt="Mapa de Zonas Fixy" class="w-full h-auto object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Requirements -->
+    <section id="requisitos" class="py-16 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-extrabold text-gray-900 text-center mb-12">Requisitos</h2>
+            <div class="bg-fixy-paper rounded-2xl p-8 md:p-12 shadow-inner">
+                <ul class="space-y-6">
+                    <li class="flex items-center bg-white p-4 rounded-lg shadow-sm">
+                        <svg class="h-8 w-8 text-fixy-blue mr-4 flex-shrink-0" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        <span class="text-lg text-gray-800 font-medium">Camioneta chica, auto o moto.</span>
+                    </li>
+                    <li class="flex items-center bg-white p-4 rounded-lg shadow-sm">
+                        <svg class="h-8 w-8 text-fixy-blue mr-4 flex-shrink-0" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                        </svg>
+                        <span class="text-lg text-gray-800 font-medium">Celular Android con datos.</span>
+                    </li>
+                    <li class="flex items-center bg-white p-4 rounded-lg shadow-sm">
+                        <svg class="h-8 w-8 text-fixy-blue mr-4 flex-shrink-0" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                        </svg>
+                        <span class="text-lg text-gray-800 font-medium">Papeles del vehículo al día.</span>
+                    </li>
+                    <li class="flex items-center bg-white p-4 rounded-lg shadow-sm">
+                        <svg class="h-8 w-8 text-fixy-blue mr-4 flex-shrink-0" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                        </svg>
+                        <span class="text-lg text-gray-800 font-medium">Servicio desde domicilio particular.</span>
+                    </li>
+                    <li class="flex items-center bg-white p-4 rounded-lg shadow-sm">
+                        <svg class="h-8 w-8 text-fixy-blue mr-4 flex-shrink-0" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M10 6H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V8a2 2 0 00-2-2h-5m-4 0V5a2 2 0 114 0v1m-4 0a2 2 0 104 0m-5 8a2 2 0 100-4 2 2 0 000 4zm0 0c1.306 0 2.417.835 2.83 2M9 14a3.001 3.001 0 00-2.83 2M15 11h3m-3 4h2" />
+                        </svg>
+                        <span class="text-lg text-gray-800 font-medium">App Mi Argentina instalada (identidad y
+                            licencia).</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Proceso de Incorporación -->
+    <section class="py-16 bg-fixy-blue text-white relative overflow-hidden">
+        <div
+            class="absolute top-0 left-0 w-full h-full opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]">
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-10">
+                <h2 class="text-3xl font-extrabold sm:text-4xl">Proceso de Incorporación</h2>
+                <p class="mt-4 text-xl font-light">
+                    Realizamos 2 entrevistas grupales por día, de lunes a viernes (excepto feriados).
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div class="bg-white/10 backdrop-blur-md rounded-xl p-8 border border-white/20 text-center">
+                    <h3 class="text-2xl font-bold mb-4 text-fixy-yellow">Horarios</h3>
+                    <div class="space-y-3 text-lg">
+                        <p class="bg-white/20 py-2 px-4 rounded-lg inline-block w-full">11:00 hs</p>
+                        <p class="bg-white/20 py-2 px-4 rounded-lg inline-block w-full">14:00 hs</p>
+                    </div>
+                </div>
+                <div
+                    class="bg-white/10 backdrop-blur-md rounded-xl p-8 border border-white/20 text-center flex flex-col justify-center">
+                    <h3 class="text-2xl font-bold mb-4 text-fixy-yellow">Ubicación</h3>
+                    <p class="text-2xl font-semibold mb-2">Fernández 1957</p>
+                    <p class="text-lg opacity-80">CABA</p>
+                </div>
+            </div>
+
+            <div class="mt-8 text-center">
+                <p class="text-fixy-yellow font-bold text-lg bg-black/20 inline-block px-6 py-2 rounded-full">
+                    (No realizamos entrevistas en otros horarios. Ser puntuales.)
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Cierre + CTA -->
+    <section class="py-20 bg-white text-center">
+        <div class="max-w-4xl mx-auto px-4">
+            <h2 class="text-4xl font-extrabold text-gray-900 mb-6">¿Te interesa trabajar con nosotros?</h2>
+            <p class="text-xl text-gray-600 mb-10">Hablá por WhatsApp y continuamos con el proceso.</p>
+            <a href="https://wa.link/72nkep" target="_blank"
+                class="inline-flex items-center justify-center px-10 py-5 border border-transparent text-xl font-bold rounded-full text-white bg-fixy-blue hover:bg-sky-600 shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all">
+                Hablar por WhatsApp
+                <svg class="ml-2 -mr-1 w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                        d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z" />
+                </svg>
+            </a>
+        </div>
+    </section>
+
+    <!-- Operador Logístico -->
+    <section class="py-8 bg-gray-50 text-sm">
+        <div class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-lg font-bold text-gray-900 mb-4">Operador Logístico (Informativo)</h2>
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
+                <p class="text-gray-600 mb-3">
+                    En caso de que tengas interés en trabajar con nosotros como Operador Logístico, enviá un correo a:
+                </p>
+                <a href="mailto:recursos.humanos@fixy.com.ar"
+                    class="text-lg font-bold text-fixy-blue hover:underline mb-4 block">
+                    recursos.humanos@fixy.com.ar
+                </a>
+                <p class="text-gray-600 mb-2 font-medium">Incluyendo:</p>
+                <ul class="text-gray-600 inline-block text-left mb-4 list-disc pl-5">
+                    <li>Remuneración pretendida.</li>
+                    <li>CV actualizado.</li>
+                </ul>
+                <p class="text-gray-900 font-bold">Gracias.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center">
+            <div class="mb-6 md:mb-0">
+                <img src="assets/Logo.png" alt="Fixy" class="h-8 w-auto opacity-80 brightness-0 invert">
+            </div>
+            <div class="text-sm text-center md:text-right">
+                <p class="mb-2">“Fixy es operador logístico. La disponibilidad de zonas y cupos puede variar.”</p>
+                <p>&copy; 2024 Fixy Logística. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.link/72nkep"
+        class="fixed bottom-6 right-6 z-50 bg-[#25D366] text-white p-4 rounded-full shadow-lg hover:shadow-2xl hover:bg-[#20bd5a] transition-all transform hover:scale-110 flex items-center justify-center group"
+        aria-label="Escribinos por WhatsApp">
+        <span
+            class="absolute right-full mr-4 bg-gray-900 text-white text-xs py-1 px-3 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">Escribinos
+            por WhatsApp</span>
+        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+            <path
+                d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z" />
+        </svg>
+    </a>
+
+    <!-- Map Modal -->
+    <div id="map-modal"
+        class="fixed inset-0 z-[60] flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300">
+        <div class="bg-white rounded-2xl shadow-2xl max-w-sm w-full p-6 transform scale-95 transition-transform duration-300"
+            id="map-modal-content">
+            <h3 class="text-lg font-bold text-gray-900 mb-2">Valor por paquete entregado</h3>
+            <p class="text-4xl font-extrabold text-fixy-blue mb-2" id="modal-price">$0</p>
+            <p class="text-sm text-gray-500 mb-6" id="modal-info">Los valores dependen de la zona asignada.</p>
+            <button id="close-modal"
+                class="w-full bg-gray-100 hover:bg-gray-200 text-gray-800 font-bold py-3 rounded-lg transition-colors">
+                Entendido
+            </button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
