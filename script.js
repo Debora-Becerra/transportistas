@@ -1,3 +1,5 @@
+const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzWZ-C1Grp7hKnsbX87X8WKXSbXqFQmngdgbLERovyKLx1ych5icpSRxIixeTYRnTZY/exec";
+
 document.addEventListener('DOMContentLoaded', () => {
     // --- Mobile Menu Logic ---
     const btn = document.getElementById('mobile-menu-btn');
@@ -75,4 +77,158 @@ document.addEventListener('DOMContentLoaded', () => {
             closeModalFunc();
         }
     });
+
+    // --- Attendance Form Logic ---
+    const attendanceForm = document.getElementById('registroForm');
+    const attendanceDate = document.getElementById('attendance-date');
+    const attendanceDateError = document.getElementById('attendance-date-error');
+    const whatsappPhone = document.getElementById('whatsapp-phone');
+    const whatsappPhoneError = document.getElementById('whatsapp-phone-error');
+    const formMessage = document.getElementById('formMessage');
+
+    function getTodayValue() {
+        const today = new Date();
+        const timezoneOffset = today.getTimezoneOffset() * 60000;
+        return new Date(today.getTime() - timezoneOffset).toISOString().split('T')[0];
+    }
+
+    function showDateError(message) {
+        attendanceDateError.textContent = message;
+        attendanceDate.setAttribute('aria-invalid', 'true');
+    }
+
+    function clearDateError() {
+        attendanceDateError.textContent = '';
+        attendanceDate.removeAttribute('aria-invalid');
+    }
+
+    function cleanPhoneValue(value) {
+        return value.replace(/\D/g, '');
+    }
+
+    function showPhoneError() {
+        whatsappPhoneError.textContent = 'Ingresá un número de WhatsApp válido.';
+        whatsappPhone.setAttribute('aria-invalid', 'true');
+    }
+
+    function clearPhoneError() {
+        whatsappPhoneError.textContent = '';
+        whatsappPhone.removeAttribute('aria-invalid');
+    }
+
+    function getValidPhoneValue() {
+        const cleanPhone = cleanPhoneValue(whatsappPhone.value);
+
+        if (cleanPhone.length < 10 || cleanPhone.length > 13) {
+            showPhoneError();
+            whatsappPhone.focus();
+            return '';
+        }
+
+        clearPhoneError();
+        return cleanPhone;
+    }
+
+    if (attendanceForm && attendanceDate) {
+        attendanceDate.min = getTodayValue();
+
+        if (whatsappPhone) {
+            whatsappPhone.addEventListener('input', clearPhoneError);
+        }
+
+        attendanceDate.addEventListener('change', () => {
+            clearDateError();
+
+            if (!attendanceDate.value) {
+                return;
+            }
+
+            const selectedDate = new Date(`${attendanceDate.value}T00:00:00`);
+            const selectedDay = selectedDate.getDay();
+
+            if (attendanceDate.value < getTodayValue()) {
+                showDateError('No se pueden seleccionar fechas anteriores al día actual.');
+                attendanceDate.value = '';
+                return;
+            }
+
+            if (selectedDay === 0 || selectedDay === 6) {
+                showDateError('Las charlas se realizan únicamente de lunes a viernes.');
+                attendanceDate.value = '';
+            }
+        });
+
+        attendanceForm.addEventListener('submit', async (event) => {
+            event.preventDefault();
+            clearDateError();
+            clearPhoneError();
+            formMessage.textContent = '';
+            formMessage.classList.remove('form-message-error');
+
+            if (!attendanceForm.checkValidity()) {
+                attendanceForm.reportValidity();
+                return;
+            }
+
+            if (attendanceDate.value < getTodayValue()) {
+                showDateError('No se pueden seleccionar fechas anteriores al día actual.');
+                attendanceDate.value = '';
+                attendanceDate.focus();
+                return;
+            }
+
+            const selectedDate = new Date(`${attendanceDate.value}T00:00:00`);
+            const selectedDay = selectedDate.getDay();
+
+            if (selectedDay === 0 || selectedDay === 6) {
+                showDateError('Las charlas se realizan únicamente de lunes a viernes.');
+                attendanceDate.value = '';
+                attendanceDate.focus();
+                return;
+            }
+
+            const cleanWhatsapp = getValidPhoneValue();
+
+            if (!cleanWhatsapp) {
+                return;
+            }
+
+            const submitButton = attendanceForm.querySelector('button[type="submit"]');
+            const originalButtonText = submitButton.textContent;
+            const formData = new FormData(attendanceForm);
+            const data = {
+                nombre_apellido: formData.get('nombre_apellido'),
+                whatsapp: cleanWhatsapp,
+                dia_asistencia: formData.get('dia_asistencia'),
+                horario_asistencia: formData.get('horario_asistencia'),
+                zona: formData.get('zona'),
+                tipo_vehiculo: formData.get('tipo_vehiculo'),
+                fecha_registro: new Date().toLocaleString("es-AR")
+            };
+
+            submitButton.disabled = true;
+            submitButton.textContent = 'Enviando...';
+
+            try {
+                await fetch(GOOGLE_SCRIPT_URL, {
+                    method: "POST",
+                    mode: "no-cors",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify(data)
+                });
+
+                formMessage.textContent = 'Registro enviado correctamente. Te esperamos en la charla informativa.';
+                attendanceForm.reset();
+                attendanceDate.min = getTodayValue();
+            } catch (error) {
+                formMessage.textContent = 'No pudimos enviar el registro. Intentá nuevamente más tarde.';
+                formMessage.classList.add('form-message-error');
+            } finally {
+                submitButton.disabled = false;
+                submitButton.textContent = originalButtonText;
+            }
+        });
+    }
 });

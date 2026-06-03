@@ -52,8 +52,8 @@
                     <a href="#zonas" class="text-gray-600 hover:text-fixy-blue font-medium transition-colors">Zonas</a>
                     <a href="#requisitos"
                         class="text-gray-600 hover:text-fixy-blue font-medium transition-colors">Requisitos</a>
-                    <a href="#entrevista"
-                        class="text-gray-600 hover:text-fixy-blue font-medium transition-colors">Entrevista</a>
+                    <a href="#charlas"
+                        class="text-gray-600 hover:text-fixy-blue font-medium transition-colors">Charlas</a>
                 </div>
 
                 <!-- Mobile menu button -->
@@ -81,8 +81,8 @@
                     class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-fixy-blue hover:bg-gray-50 rounded-md">Zonas</a>
                 <a href="#requisitos"
                     class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-fixy-blue hover:bg-gray-50 rounded-md">Requisitos</a>
-                <a href="#entrevista"
-                    class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-fixy-blue hover:bg-gray-50 rounded-md">Entrevista</a>
+                <a href="#charlas"
+                    class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-fixy-blue hover:bg-gray-50 rounded-md">Charlas</a>
             </div>
         </div>
     </nav>
@@ -99,7 +99,12 @@
                     En Fixy los transportistas son parte central de la operación. Buscamos personas que quieran trabajar
                     con reglas claras, recorridos definidos y pagos transparentes.
                 </p>
-                <!-- CTA Buttons removed as requested -->
+                <div class="mt-8">
+                    <a href="#registro"
+                        class="inline-flex items-center justify-center px-8 py-4 border border-transparent text-lg font-bold rounded-full text-white bg-fixy-blue hover:bg-sky-600 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all">
+                        Registrá tu asistencia
+                    </a>
+                </div>
             </div>
         </div>
     </section>
@@ -160,7 +165,7 @@
                         </svg>
                     </div>
                     <h3 class="font-bold text-gray-900 mb-2">App Inteligente</h3>
-                    <p class="text-gray-500 text-sm">Notificaciones automáticas al destinatario por WhatsApp.</p>
+                    <p class="text-gray-500 text-sm">Notificaciones automáticas al destinatario.</p>
                 </div>
             </div>
         </div>
@@ -173,24 +178,23 @@
             <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl text-center mb-12">Modalidades e Ingresos</h2>
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
 
-                <!-- Turno Mañana (Izquierda) -->
+                <!-- Carga y recorrido (Izquierda) -->
                 <div class="bg-white rounded-2xl shadow-lg overflow-hidden border-t-8 border-fixy-blue h-full">
                     <div class="p-8">
                         <div class="flex items-center justify-between mb-6">
-                            <h3 class="text-2xl font-bold text-gray-900">Turno Mañana</h3>
+                            <h3 class="text-2xl font-bold text-gray-900">Carga y recorrido</h3>
                             <span
                                 class="bg-blue-100 text-fixy-blue text-xs font-bold px-3 py-1 rounded-full uppercase">Principal</span>
                         </div>
                         <ul class="space-y-4 text-gray-600">
-                            <li class="flex items-center"><span class="w-2 h-2 bg-fixy-blue rounded-full mr-3"></span>45
-                                a 60 envíos diarios.</li>
+                            <li class="flex items-center"><span class="w-2 h-2 bg-fixy-blue rounded-full mr-3"></span>Horarios
+                                de carga: entre 5:30 y 11:00 hs. Las zonas más lejanas salen más temprano.</li>
                             <li class="flex items-center"><span
-                                    class="w-2 h-2 bg-fixy-blue rounded-full mr-3"></span>Lunes a viernes.</li>
+                                    class="w-2 h-2 bg-fixy-blue rounded-full mr-3"></span>Cantidad de carga: promedio
+                                entre 30 y 60 envíos diarios. Varía según volumen y capacidad del transportista.</li>
                             <li class="flex items-center"><span
-                                    class="w-2 h-2 bg-fixy-blue rounded-full mr-3"></span>Horario de carga: 8:00 am en
-                                Parque Avellaneda.</li>
-                            <li class="flex items-center"><span
-                                    class="w-2 h-2 bg-fixy-blue rounded-full mr-3"></span>Regreso al depósito para
+                                    class="w-2 h-2 bg-fixy-blue rounded-full mr-3"></span>Finalización de recorrido:
+                                regreso al depósito para
                                 rendir al finalizar el recorrido.</li>
                         </ul>
                     </div>
@@ -232,20 +236,20 @@
 
 
     <!-- Zonas (Interactive Map) -->
-    <section id="zonas" class="py-16 bg-gray-900 text-white">
+    <section id="zonas" class="py-20 bg-[#f4f8fb]">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-10">
-                <h2 class="text-3xl font-extrabold text-white sm:text-4xl">Zonas de Cobertura</h2>
-                <p class="mt-4 text-xl text-gray-300 max-w-2xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-extrabold text-[#12324a] sm:text-4xl">Zonas de Cobertura</h2>
+                <p class="mt-4 text-xl text-[#425466] max-w-2xl mx-auto">
 
                     Cubrimos Zona Sur, Oeste, Norte y CABA.<br>
-                    <span class="text-fixy-yellow font-medium">Los colores del mapa indican el monto abonado por paquete
+                    <span class="text-[#f4b400] font-semibold">Los colores del mapa indican el monto abonado por paquete
                         según localidad.</span>
                 </p>
             </div>
 
-            <div class="relative max-w-4xl mx-auto bg-white rounded-xl overflow-hidden shadow-2xl">
-                <div class="relative" id="map-container">
+            <div class="relative max-w-4xl mx-auto bg-white rounded-2xl overflow-hidden shadow-[0_16px_40px_rgba(0,0,0,0.08)] p-3 md:p-4">
+                <div class="relative overflow-hidden rounded-xl" id="map-container">
                     <img src="./Mapa2026.png" alt="Mapa de Zonas Fixy" class="w-full h-auto object-cover">
                 </div>
             </div>
@@ -264,7 +268,7 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                         </svg>
-                        <span class="text-lg text-gray-800 font-medium">Camioneta chica, auto o moto.</span>
+                        <span class="text-lg text-gray-800 font-medium">Utilitarios, partner, motos o autos.</span>
                     </li>
                     <li class="flex items-center bg-white p-4 rounded-lg shadow-sm">
                         <svg class="h-8 w-8 text-fixy-blue mr-4 flex-shrink-0" fill="none" viewBox="0 0 24 24"
@@ -272,7 +276,7 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
                         </svg>
-                        <span class="text-lg text-gray-800 font-medium">Celular Android con datos.</span>
+                        <span class="text-lg text-gray-800 font-medium">Seguro al día.</span>
                     </li>
                     <li class="flex items-center bg-white p-4 rounded-lg shadow-sm">
                         <svg class="h-8 w-8 text-fixy-blue mr-4 flex-shrink-0" fill="none" viewBox="0 0 24 24"
@@ -280,7 +284,7 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                         </svg>
-                        <span class="text-lg text-gray-800 font-medium">Papeles del vehículo al día.</span>
+                        <span class="text-lg text-gray-800 font-medium">VTV vigente.</span>
                     </li>
                     <li class="flex items-center bg-white p-4 rounded-lg shadow-sm">
                         <svg class="h-8 w-8 text-fixy-blue mr-4 flex-shrink-0" fill="none" viewBox="0 0 24 24"
@@ -288,7 +292,7 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
                         </svg>
-                        <span class="text-lg text-gray-800 font-medium">Servicio desde domicilio particular.</span>
+                        <span class="text-lg text-gray-800 font-medium">Cédula verde o azul, según corresponda.</span>
                     </li>
                     <li class="flex items-center bg-white p-4 rounded-lg shadow-sm">
                         <svg class="h-8 w-8 text-fixy-blue mr-4 flex-shrink-0" fill="none" viewBox="0 0 24 24"
@@ -296,15 +300,42 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M10 6H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V8a2 2 0 00-2-2h-5m-4 0V5a2 2 0 114 0v1m-4 0a2 2 0 104 0m-5 8a2 2 0 100-4 2 2 0 000 4zm0 0c1.306 0 2.417.835 2.83 2M9 14a3.001 3.001 0 00-2.83 2M15 11h3m-3 4h2" />
                         </svg>
-                        <span class="text-lg text-gray-800 font-medium">App Mi Argentina instalada (identidad y
-                            licencia).</span>
+                        <span class="text-lg text-gray-800 font-medium">Registro al día.</span>
+                    </li>
+                    <li class="flex items-center bg-white p-4 rounded-lg shadow-sm">
+                        <svg class="h-8 w-8 text-fixy-blue mr-4 flex-shrink-0" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                        </svg>
+                        <span class="text-lg text-gray-800 font-medium">Un servicio a nombre del titular, por ejemplo
+                            luz, gas o cable, que coincida con el domicilio del titular.</span>
+                    </li>
+                    <li class="flex items-center bg-white p-4 rounded-lg shadow-sm">
+                        <svg class="h-8 w-8 text-fixy-blue mr-4 flex-shrink-0" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M10 6H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V8a2 2 0 00-2-2h-5m-4 0V5a2 2 0 114 0v1m-4 0a2 2 0 104 0m-5 8a2 2 0 100-4 2 2 0 000 4zm0 0c1.306 0 2.417.835 2.83 2M9 14a3.001 3.001 0 00-2.83 2M15 11h3m-3 4h2" />
+                        </svg>
+                        <span class="text-lg text-gray-800 font-medium">App Mi Argentina instalada para validar
+                            identidad y licencia.</span>
+                    </li>
+                    <li class="flex items-center bg-white p-4 rounded-lg shadow-sm">
+                        <svg class="h-8 w-8 text-fixy-blue mr-4 flex-shrink-0" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                        </svg>
+                        <span class="text-lg text-gray-800 font-medium">Esta información se solicitará de forma
+                            digital.</span>
                     </li>
                 </ul>
 
-                <!-- Documentación para la Entrevista -->
+                <!-- Documentación para la charla informativa -->
                 <div class="mt-10 bg-white p-6 md:p-8 rounded-xl shadow-md border-l-4 border-fixy-yellow">
                     <h3 class="text-xl font-bold text-gray-900 mb-2">Para agilizar el proceso de contratación</h3>
-                    <p class="text-gray-600 mb-6">Tener a mano las siguientes fotos el día de la entrevista:</p>
+                    <p class="text-gray-600 mb-6">La documentación se solicitará de forma digital durante el proceso de
+                        incorporación:</p>
 
                     <ul class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
                         <li class="flex items-center text-gray-700">
@@ -329,7 +360,7 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M5 13l4 4L19 7" />
                             </svg>
-                            Registro de conducir (ambos lados)
+                            Registro de conducir vigente (ambos lados)
                         </li>
                         <li class="flex items-center text-gray-700">
                             <svg class="h-5 w-5 text-fixy-blue mr-3" fill="none" viewBox="0 0 24 24"
@@ -337,7 +368,7 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M5 13l4 4L19 7" />
                             </svg>
-                            Boleta de servicio de su domicilio
+                            Servicio a nombre del titular
                         </li>
                     </ul>
 
@@ -350,7 +381,7 @@
                         <p class="text-sm text-gray-700 font-medium">
                             <span class="block text-fixy-blue font-bold mb-1">Dato Importante:</span>
                             Debés tener descargada la aplicación <span class="uppercase font-bold">Mi Argentina</span>
-                            para validar tu identidad y registro de conducir.
+                            para validar tu identidad y licencia.
                         </p>
                     </div>
                 </div>
@@ -359,32 +390,34 @@
     </section>
 
     <!-- Proceso de Incorporación -->
-    <section id="entrevista" class="py-16 bg-fixy-blue text-white relative overflow-hidden">
+    <section id="charlas" class="py-20 bg-[#f5f7fa] text-gray-900 relative overflow-hidden">
         <div
-            class="absolute top-0 left-0 w-full h-full opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]">
+            class="hidden absolute top-0 left-0 w-full h-full opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]">
         </div>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="text-center mb-10">
-                <h2 class="text-3xl font-extrabold sm:text-4xl">Proceso de Incorporación</h2>
-                <p class="mt-4 text-xl font-light">
-                    Realizamos 2 entrevistas grupales por día, de lunes a viernes (excepto feriados).
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-extrabold text-slate-800 sm:text-5xl">Charlas informativas</h2>
+                <p class="mt-5 max-w-3xl mx-auto text-lg leading-8 text-slate-600">
+                    Realizamos 3 charlas informativas grupales, de lunes a viernes, excepto feriados. Es clave que
+                    asistas para conocer la información y, si te gusta la metodología, puedas sumarte.
                 </p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                <div class="bg-white/10 backdrop-blur-md rounded-xl p-8 border border-white/20 text-center">
-                    <h3 class="text-2xl font-bold mb-4 text-fixy-yellow">Horarios</h3>
-                    <div class="space-y-3 text-lg">
-                        <p class="bg-white/20 py-2 px-4 rounded-lg inline-block w-full">11:00 hs</p>
-                        <p class="bg-white/20 py-2 px-4 rounded-lg inline-block w-full">14:00 hs</p>
-                        <p class="bg-white/20 py-2 px-4 rounded-lg inline-block w-full">17:00 hs</p>
+                <div class="bg-white rounded-2xl p-8 md:p-10 border border-slate-200 shadow-sm text-center">
+                    <h3 class="text-2xl font-extrabold mb-6 text-fixy-blue">Horarios</h3>
+                    <div class="space-y-4 text-lg">
+                        <p class="bg-blue-50 border border-blue-100 py-3 px-4 rounded-xl inline-block w-full text-slate-800 font-bold shadow-sm">11:00 hs</p>
+                        <p class="bg-blue-50 border border-blue-100 py-3 px-4 rounded-xl inline-block w-full text-slate-800 font-bold shadow-sm">14:00 hs</p>
+                        <p class="bg-blue-50 border border-blue-100 py-3 px-4 rounded-xl inline-block w-full text-slate-800 font-bold shadow-sm">17:00 hs</p>
                     </div>
                 </div>
                 <div
-                    class="bg-white/10 backdrop-blur-md rounded-xl p-8 border border-white/20 text-center flex flex-col justify-center">
-                    <h3 class="text-2xl font-bold mb-4 text-fixy-yellow">Ubicación</h3>
-                    <p class="text-2xl font-semibold mb-2">Fernández 1957</p>
-                    <p class="text-lg opacity-80">CABA</p>
+                    class="bg-white rounded-2xl p-8 md:p-10 border border-slate-200 shadow-sm text-center flex flex-col justify-center">
+                    <h3 class="text-2xl font-extrabold mb-6 text-fixy-blue">Ubicación</h3>
+                    <p class="text-2xl font-extrabold leading-snug text-slate-800 mb-4">Fernández 1957 - Parque Avellaneda, Capital Federal. CP 1407</p>
+                    <p class="text-base md:text-lg leading-7 text-slate-600">Las charlas informativas no requieren reserva de turno. Podés asistir
+                        sin previo aviso.</p>
                 </div>
             </div>
 
@@ -397,10 +430,81 @@
                 </iframe>
             </div> -->
 
-            <div class="mt-8 text-center">
-                <p class="text-fixy-yellow font-bold text-lg bg-black/20 inline-block px-6 py-2 rounded-full">
-                    (No realizamos entrevistas en otros horarios. Ser puntuales.)
+            <div class="mt-10 max-w-4xl mx-auto">
+                <p class="bg-[#fff4d6] border border-yellow-200 border-l-4 border-l-fixy-yellow text-amber-900 font-semibold text-base md:text-lg leading-7 px-6 py-5 rounded-xl shadow-sm">
+                    No realizamos charlas informativas en otros horarios. La tolerancia de espera es de 5 minutos. Si la
+                    charla ya comenzó, podés asistir a cualquiera de los horarios posteriores.
                 </p>
+            </div>
+
+            <div class="mt-8 text-center">
+                <a href="#registro"
+                    class="inline-flex items-center justify-center px-8 py-4 border border-transparent text-lg font-bold rounded-full text-white bg-fixy-blue hover:bg-sky-600 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all">
+                    Registrar asistencia
+                </a>
+            </div>
+
+            <div id="registro" class="mt-12 max-w-4xl mx-auto bg-white rounded-2xl border border-slate-200 shadow-[0_16px_40px_rgba(0,0,0,0.08)] p-6 md:p-10">
+                <div class="text-center mb-8">
+                    <h3 class="text-3xl font-extrabold text-slate-800">Registrá tu asistencia</h3>
+                    <p class="mt-3 max-w-2xl mx-auto text-base md:text-lg leading-7 text-slate-600">
+                        Completá tus datos y seleccioná el día y horario en el que vas a asistir a la charla informativa.
+                    </p>
+                </div>
+
+                <form id="registroForm" class="grid grid-cols-1 md:grid-cols-2 gap-5" novalidate>
+                    <div class="form-field md:col-span-2">
+                        <label for="full-name">Nombre y apellido</label>
+                        <input type="text" id="full-name" name="nombre_apellido" placeholder="Ej: Juan Pérez" required>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="whatsapp-phone">Teléfono WhatsApp</label>
+                        <input type="tel" id="whatsapp-phone" name="whatsapp" inputmode="numeric" autocomplete="tel"
+                            placeholder="Ej: 11 2345 6789" required>
+                        <p class="form-help">Usaremos este número para contactarte si es necesario.</p>
+                        <p id="whatsapp-phone-error" class="form-error" aria-live="polite"></p>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="attendance-date">Día de asistencia</label>
+                        <input type="date" id="attendance-date" name="dia_asistencia" required>
+                        <p id="attendance-date-error" class="form-error" aria-live="polite"></p>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="attendance-time">Horario de asistencia</label>
+                        <select id="attendance-time" name="horario_asistencia" required>
+                            <option value="">Seleccionar horario</option>
+                            <option value="11:00">11:00 hs</option>
+                            <option value="14:00">14:00 hs</option>
+                            <option value="17:00">17:00 hs</option>
+                        </select>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="residence-zone">¿De qué zona sos?</label>
+                        <input type="text" id="residence-zone" name="zona"
+                            placeholder="Ej: Lomas de Zamora, San Martín, CABA" required>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="vehicle-type">Tipo de vehículo</label>
+                        <select id="vehicle-type" name="tipo_vehiculo" required>
+                            <option value="">Seleccionar vehículo</option>
+                            <option value="Moto">Moto</option>
+                            <option value="Auto">Auto</option>
+                            <option value="Utilitario">Utilitario</option>
+                            <option value="Partner">Partner</option>
+                            <option value="Otro">Otro</option>
+                        </select>
+                    </div>
+
+                    <div class="md:col-span-2">
+                        <button type="submit" class="form-submit-btn">Enviar registro</button>
+                        <p id="formMessage" class="form-success" role="status" aria-live="polite"></p>
+                    </div>
+                </form>
             </div>
         </div>
     </section>
@@ -411,15 +515,14 @@
     <section class="py-20 bg-white text-center">
         <div class="max-w-4xl mx-auto px-4">
             <h2 class="text-4xl font-extrabold text-gray-900 mb-6">¿Te interesa trabajar con nosotros?</h2>
-            <p class="text-xl text-gray-600 mb-10">Para continuar con el proceso envíanos tu <strong>nombre completo</strong>, <strong>tipo de
-                vehículo</strong> y <strong>localidad de residencia</strong></p>
-            <a href="https://wa.link/elmjd6" target="_blank"
+            <p class="text-xl text-gray-600 mb-10">Para continuar con el proceso, completá el formulario de registro de asistencia.</p>
+            <a href="#registro"
                 class="inline-flex items-center justify-center px-10 py-5 border border-transparent text-xl font-bold rounded-full text-white bg-fixy-blue hover:bg-sky-600 shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all">
-                Avanzar con la Entrevista
-                <svg class="ml-2 -mr-1 w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                Completar registro
+                <!--
                     <path
                         d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z" />
-                </svg>
+                -->
             </a>
         </div>
     </section>
@@ -493,23 +596,25 @@
     </section>
 
     <!-- Operador Logístico -->
-    <section class="py-8 bg-gray-50 text-sm">
-        <div class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-lg font-bold text-gray-900 mb-4">Operador Logístico (Informativo)</h2>
-            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
-                <p class="text-gray-600 mb-3">
+    <section class="py-6 bg-gray-50 text-sm">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-lg font-bold text-gray-900 mb-3">Operador Logístico (Informativo)</h2>
+            <div class="bg-white px-6 py-5 md:px-10 md:py-8 rounded-xl shadow-sm border border-gray-200">
+                <p class="text-gray-600 mb-2">
                     En caso de que tengas interés en trabajar con nosotros como Operador Logístico, enviá un correo a:
                 </p>
                 <a href="mailto:recursos.humanos@fixy.com.ar"
-                    class="text-lg font-bold text-fixy-blue hover:underline mb-4 block">
+                    class="text-lg font-bold text-fixy-blue hover:underline mb-3 block">
                     recursos.humanos@fixy.com.ar
                 </a>
-                <p class="text-gray-600 mb-2 font-medium">Incluyendo:</p>
-                <ul class="text-gray-600 inline-block text-left mb-4 list-disc pl-5">
-                    <li>Remuneración pretendida.</li>
-                    <li>CV actualizado.</li>
-                </ul>
-                <p class="text-gray-900 font-bold">Gracias.</p>
+                <div class="md:flex md:items-center md:justify-center md:gap-8">
+                    <p class="text-gray-600 mb-2 md:mb-0 font-medium">Incluyendo:</p>
+                    <ul class="text-gray-600 inline-block text-left mb-3 md:mb-0 list-disc pl-5 space-y-1">
+                        <li>Remuneración pretendida.</li>
+                        <li>CV actualizado.</li>
+                    </ul>
+                    <p class="text-gray-900 font-bold">Gracias.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -526,19 +631,6 @@
             </div>
         </div>
     </footer>
-
-    <!-- Floating WhatsApp Button -->
-    <a href="https://wa.link/elmjd6"
-        class="fixed bottom-6 right-6 z-50 bg-[#25D366] text-white p-4 rounded-full shadow-lg hover:shadow-2xl hover:bg-[#20bd5a] transition-all transform hover:scale-110 flex items-center justify-center group"
-        aria-label="Escribinos por WhatsApp">
-        <span
-            class="absolute right-full mr-4 bg-gray-900 text-white text-xs py-1 px-3 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">Escribinos
-            por WhatsApp</span>
-        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
-            <path
-                d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z" />
-        </svg>
-    </a>
 
     <!-- Map Modal -->
     <div id="map-modal"
