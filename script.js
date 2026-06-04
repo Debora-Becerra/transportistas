@@ -219,6 +219,10 @@ document.addEventListener('DOMContentLoaded', () => {
                     body: JSON.stringify(data)
                 });
 
+                                if (typeof fbq !== "undefined") {
+                    fbq("track", "Lead");
+                }
+
                 formMessage.textContent = 'Registro enviado correctamente. Te esperamos en la charla informativa.';
                 attendanceForm.reset();
                 attendanceDate.min = getTodayValue();
