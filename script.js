@@ -85,6 +85,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const whatsappPhone = document.getElementById('whatsapp-phone');
     const whatsappPhoneError = document.getElementById('whatsapp-phone-error');
     const formMessage = document.getElementById('formMessage');
+    const whatsappFallback = document.getElementById('whatsappFallback');
+    const whatsappConfirmationUrl = 'https://wa.link/z41rr9';
 
     function getTodayValue() {
         const today = new Date();
@@ -164,6 +166,9 @@ document.addEventListener('DOMContentLoaded', () => {
             clearPhoneError();
             formMessage.textContent = '';
             formMessage.classList.remove('form-message-error');
+            if (whatsappFallback) {
+                whatsappFallback.classList.add('hidden');
+            }
 
             if (!attendanceForm.checkValidity()) {
                 attendanceForm.reportValidity();
@@ -219,13 +224,18 @@ document.addEventListener('DOMContentLoaded', () => {
                     body: JSON.stringify(data)
                 });
 
-                                if (typeof fbq !== "undefined") {
+                if (typeof fbq !== "undefined") {
                     fbq("track", "Lead");
                 }
 
-                formMessage.textContent = 'Registro enviado correctamente. Te esperamos en la charla informativa.';
+                formMessage.textContent = 'Formulario enviado correctamente. Ahora te llevamos a WhatsApp para confirmar tu registro.';
                 attendanceForm.reset();
                 attendanceDate.min = getTodayValue();
+
+                const whatsappWindow = window.open(whatsappConfirmationUrl, '_blank', 'noopener');
+                if (!whatsappWindow && whatsappFallback) {
+                    whatsappFallback.classList.remove('hidden');
+                }
             } catch (error) {
                 formMessage.textContent = 'No pudimos enviar el registro. Intentá nuevamente más tarde.';
                 formMessage.classList.add('form-message-error');
